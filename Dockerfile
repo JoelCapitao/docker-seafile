@@ -36,9 +36,9 @@ ADD service-seahub-run.sh /etc/service/seahub/run
 ADD service-seahub-stop.sh /etc/service/seahub/stop
 
 # Install Nginx.
-#RUN mkdir /etc/service/nginx
-#ADD service-nginx.sh /etc/service/nginx/run
-#ADD seafile-nginx.conf /etc/nginx/sites-available/seafile
+RUN mkdir /etc/service/nginx
+ADD service-nginx.sh /etc/service/nginx/run
+ADD seafile-nginx.conf /etc/nginx/sites-available/seafile
 
 # Expose needed ports.
 EXPOSE 10001 12001 8000 8082
